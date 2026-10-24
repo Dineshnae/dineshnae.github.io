@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dinesh Natarajan</title>
+<meta name="description" content="Aerospace engineer in Bengaluru. Engineering tasks, reference solutions and graders for AI training; FEA, CFD and CAD.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231f3864'/%3E%3Ctext x='32' y='42' font-family='Segoe UI,Arial' font-size='30' font-weight='700' fill='%23fff' text-anchor='middle'%3EDN%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #ffffff; --bg-2: #f5f7fa; --text: #1b2430; --muted: #5b6672; --accent: #1f3864; --accent-2: #0a7e8c;
+    --line: #dde3ea; --card: #ffffff; --shadow: 0 1px 2px rgba(16,24,40,.06), 0 1px 3px rgba(16,24,40,.1);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f141a; --bg-2: #151c24; --text: #e6ebf0; --muted: #9aa6b2; --accent: #8fb3ff; --accent-2: #5fd0dc;
+      --line: #263140; --card: #151c24; --shadow: none;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f141a; --bg-2: #151c24; --text: #e6ebf0; --muted: #9aa6b2; --accent: #8fb3ff; --accent-2: #5fd0dc;
+    --line: #263140; --card: #151c24; --shadow: none;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.55 "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+  header.hero { background: var(--bg-2); border-bottom: 1px solid var(--line); padding: 40px 0 28px; }
+  .hero h1 { margin: 0 0 6px; font-size: 2rem; letter-spacing: .2px; }
+  .hero .tag { margin: 0 0 14px; font-size: 1.1rem; color: var(--accent); font-weight: 600; }
+  .hero p.lead { margin: 0 0 16px; max-width: 760px; color: var(--text); }
+  .meta { display: flex; flex-wrap: wrap; gap: 8px 18px; color: var(--muted); font-size: .95rem; }
+  .meta a { color: var(--accent); }
+  .btns { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn { display: inline-block; padding: 9px 14px; border-radius: 8px; border: 1px solid var(--accent); color: var(--accent); font-weight: 600; font-size: .95rem; }
+  .btn.primary { background: var(--accent); color: #fff; }
+  .btn:hover { text-decoration: none; filter: brightness(1.08); }
+  nav.toc { position: sticky; top: 0; z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); }
+  nav.toc .wrap { display: flex; flex-wrap: wrap; gap: 4px 18px; padding: 10px 16px; font-size: .92rem; }
+  nav.toc a { color: var(--muted); }
+  section { padding: 34px 0 6px; }
+  h2 { font-size: 1.25rem; margin: 0 0 14px; color: var(--accent); padding-bottom: 6px; border-bottom: 2px solid var(--line); }
+  h3 { font-size: 1.02rem; margin: 18px 0 2px; }
+  .sub { color: var(--muted); font-size: .92rem; margin: 0 0 6px; }
+  ul { margin: 6px 0 0; padding-left: 20px; }
+  li { margin: 4px 0; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px; box-shadow: var(--shadow); }
+  .card h3 { margin: 0 0 4px; }
+  .card .result { color: var(--accent-2); font-weight: 600; margin: 6px 0; }
+  .card .stack { color: var(--muted); font-size: .9rem; }
+  .pills { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pill { background: var(--bg-2); border: 1px solid var(--line); border-radius: 999px; padding: 4px 11px; font-size: .9rem; }
+  .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 10px 28px; }
+  .role { display: grid; grid-template-columns: 1fr auto; gap: 0 16px; align-items: baseline; margin-top: 16px; }
+  .role .when { color: var(--muted); font-size: .92rem; white-space: nowrap; }
+  footer { margin-top: 36px; padding: 22px 0 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: .92rem; }
+  @media (max-width: 640px) { .hero h1 { font-size: 1.6rem; } .role { grid-template-columns: 1fr; } .role .when { white-space: normal; } }
+  @media print { nav.toc, .btns { display: none; } body { font-size: 12px; } section { padding: 14px 0 0; } }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Dinesh Natarajan</h1>
+    <p class="tag">Aerospace engineer · engineering tasks, reference solutions and graders for AI training · FEA, CFD, CAD</p>
+    <p class="lead">I build the problem statement, the disclosed standard, the verified reference solution and the automated grader that test AI models on real design work, then review the grader for ways a submission could score without doing the engineering. Six Hardware/CAD tasks accepted on Handshake AI's Project Insight in October 2026; the last two were not solved in any of five trials by the benchmark's frontier model. The engineering underneath is hands-on: finite-element analysis, CFD and aerodynamics, flight dynamics, fatigue and damage tolerance, B-rep geometry and GD&amp;T.</p>
+    <div class="meta">
+      <span>Bengaluru, India</span>
+      <a href="mailto:dineshnatarajan02@gmail.com">dineshnatarajan02@gmail.com</a>
+      <a href="https://linkedin.com/in/dinesh-natarajan-baaa95206" rel="me">LinkedIn</a>
+      <a href="https://github.com/Dineshnae" rel="me">GitHub</a>
+    </div>
+    <div class="btns">
+      <a class="btn primary" href="Dinesh_Natarajan_CV.pdf">Download CV (PDF)</a>
+      <a class="btn" href="#work">Selected work</a>
+      <a class="btn" href="#experience">Experience</a>
+    </div>
+  </div>
+</header>
+
+<nav class="toc"><div class="wrap">
+  <a href="#what">What I do</a><a href="#work">Selected work</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a>
+</div></nav>
+
+<main class="wrap">
+
+<section id="what">
+  <h2>What I do</h2>
+  <div class="cols">
+    <div>
+      <h3>Engineering tasks for AI training and evaluation</h3>
+      <p>A task is a problem statement in the voice of a stress or manufacturing office, a disclosed engineering standard, a verified reference solution, and an automated grader that accepts any valid answer and rejects the textbook shortcut. I build all four, calibrate difficulty against repeated agent runs, and run the result in Docker with a separate verifier image and held-back cases.</p>
+    </div>
+    <div>
+      <h3>Verifier and grader review</h3>
+      <p>Units, equilibrium and load paths, boundary conditions, mesh-independence, solver health and convergence, reference frames, reproducibility with pinned dependencies, fail-closed numerics, and the bypasses: can a submission pass without the engineering? Each check is backed by a battery where valid alternative constructions pass and naive methods fail by a clean margin.</p>
+    </div>
+    <div>
+      <h3>The engineering underneath</h3>
+      <p>Static, modal and contact FEA in ANSYS, Abaqus and HyperMesh; CFD and aerodynamics in OpenFOAM, XFLR5 and vortex-lattice codes; flight dynamics in MATLAB and Simulink; fatigue and damage tolerance; parametric CAD in Creo, CATIA V5 and CadQuery; GD&amp;T to ASME Y14.5.</p>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <h2>Selected work</h2>
+  <div class="grid">
+    <div class="card">
+      <h3><a href="https://github.com/Dineshnae/reconloop">ReconLoop</a> · <a href="https://huggingface.co/spaces/dn2066/reconloop">live demo</a></h3>
+      <p>Settlement reconciliation agent graded against an answer key on 20 held-out batches. Rules do the work; a model breaks ties only where rules cannot, and the rules re-check every answer.</p>
+      <p class="result">83 tests; CI fails on a single wrong link</p>
+      <p class="stack">Python · Gradio · Pyodide · GitHub Actions</p>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/Dineshnae/engine-bracket-fea-ansys">Engine bracket: FEA, topology optimisation, GD&amp;T</a></h3>
+      <p>Aircraft engine mount bracket in SAE 4130 taken from validated analysis to a toleranced, inspectable definition, with a fatigue and damage-tolerance substantiation.</p>
+      <p class="result">22 % lighter at a factor of safety of 1.73; stack-ups ±0.35 mm worst case, ±0.206 mm RSS</p>
+      <p class="stack">ANSYS Mechanical · CATIA V5 · Creo · ASME Y14.5-2018 · NASGRO</p>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/Dineshnae/nlf-airfoil-cfd-xflr5">Natural-laminar-flow airfoil study</a></h3>
+      <p>NACA 63-215 and 64-210 against NACA 2412 from Re 500k to 3M, with a 3D wing and longitudinal stability derivatives.</p>
+      <p class="result">About 44 % higher L/D and 42 % lower drag at cruise</p>
+      <p class="stack">XFLR5 · lifting line · vortex lattice</p>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/Dineshnae/nlf-airfoil-ml-surrogate">Aerodynamic surrogate model</a></h3>
+      <p>Neural network predicting Cl, Cd and L/D from operating conditions and geometry, benchmarked against three other regressors and tested on unseen Reynolds numbers.</p>
+      <p class="result">L/D R² 0.998 and MAPE 2.9 % held out; 2.7 to 6.7 % on unseen Reynolds numbers; about 10⁶× faster than the solver</p>
+      <p class="stack">Python · scikit-learn · XFLR5</p>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/Dineshnae/aircraft-flight-dynamics-cessna172">Cessna 172 longitudinal flight dynamics</a></h3>
+      <p>Four-state small-perturbation state-space model with eigenvalue analysis and four elevator inputs.</p>
+      <p class="result">Short period ωn 5.60 rad/s, ζ 0.58, inside MIL-F-8785C; 6 of 6 V&amp;V checks</p>
+      <p class="stack">MATLAB · Simulink</p>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/Dineshnae/twin-boom-uav-design">Twin-boom surveillance UAV</a></h3>
+      <p>Conceptual design to a 3D-printed model in a three-person MSc team; I led the airfoil analysis, the integration, the report and the printing.</p>
+      <p class="result">2.2 m span, 2.8 kg take-off weight against a sub-5 kg brief, 0.5 kg payload</p>
+      <p class="stack">SolidWorks · XFLR5 · CATIA V5</p>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+
+  <div class="role"><h3>Task author, Hardware/CAD · Handshake AI, Project Insight (contract, remote)</h3><span class="when">Sep to Oct 2026</span></div>
+  <ul>
+    <li>Authored six terminal-based CAD and structures tasks for a frontier-model benchmark (Terminal-Bench 3 format); all six passed the automated review chain: static checks, artificiality, oracle and no-op validation, implementation rubric, deep review, adversarial verifier audit, Pass@2 and Pass@5 trials.</li>
+    <li>Each task: an instruction in the voice of a stress or manufacturing office, a disclosed standard, a Docker agent environment, and a separate verifier image holding the generating geometry and held-back cases pinned by SHA-256, with pytest graders and a binary reward written only by the verifier.</li>
+    <li>Exact graders: two-way B-rep distance at 1.0 mm sampling with a Lipschitz bound, coverage, free-edge checks after sewing, thickness within 2 percent, retained-solid count, volume and surface; non-finite values fail closed.</li>
+    <li>Sandbox and bypass review: the tool under test runs as a fresh unprivileged user under Landlock and seccomp with resource limits; verifier trees root-only; CI hosts reproduced locally with seccomp profiles and each finding fixed in one commit.</li>
+    <li>Tasks included a GFEM mid-surface idealisation tool graded on five hidden machined parts and a predictive shim-release tool graded on five hidden assemblies, each 0 of 5 trials solved; an LPBF hydraulic manifold, a hob-true spur-gear re-ratio, a bump-formed sheet-metal transition and an as-machined closed-angle frame.</li>
+  </ul>
+
+  <div class="role"><h3>Aerospace engineering expert, AI training · Innodata Inc., via Upwork (contract, remote)</h3><span class="when">Sep 2026 to present</span></div>
+  <ul>
+    <li>Review and rate aerospace engineering question, solution and answer sets used to train AI models, including problems built on engineering drawings; check each worked solution for technical accuracy and completeness and write a justification for every rating.</li>
+  </ul>
+
+  <div class="role"><h3>Reinforcement-learning task author, engineering simulation · Alignerr (Labelbox) (contract, remote)</h3><span class="when">Jun to Sep 2026</span></div>
+  <ul>
+    <li>Wrote engineering design problems with defined inputs, constraints, operating conditions, output metrics and numeric acceptance criteria, framed around the required function so different design approaches can pass.</li>
+    <li>Built a verified reference solution per task scoring 1.000 against its own grader; deterministic Python graders that reject poor meshes, diverged solves and physically invalid results and score the worst case across operating conditions, with hidden evaluation cases.</li>
+    <li>Calibrated difficulty against repeated frontier-agent runs (a wing-planform task retuned from 0.90 to 0.62); closed a geometry loophole; removed a ready-to-call model that let agents optimise straight to the reference; replaced an additive rubric floor with multiplicative feasibility gating.</li>
+    <li>Diagnosed agent failures from transcripts and reworked instructions so runs finish inside the limit (a 71-minute time-out became a 49-minute completion).</li>
+    <li>Portfolio: wing planform design by vortex lattice behind an OpenFOAM solver-health gate; backward-facing-step reattachment control in OpenFOAM; OpenSeesPy seismic retrofits, where Rayleigh damping that over-damped under uniform ground excitation was replaced by explicit dashpots. Delivered through Docker, GitHub pull requests and CI/CD.</li>
+  </ul>
+
+  <div class="role"><h3>Procurement and inventory operations supervisor · Tops, Manchester, United Kingdom</h3><span class="when">May 2023 to Sep 2025</span></div>
+  <ul>
+    <li>Led a 21-member operations team running procurement, stock replenishment and inventory control; set daily priorities and tracked delivery across functions.</li>
+  </ul>
+
+  <div class="role"><h3>Product design engineer (intern) · Black Space Research and Development, Bangarpet, Karnataka</h3><span class="when">Oct 2020 to Apr 2021</span></div>
+  <ul>
+    <li>Built a shell-element FE model of a truck rear underrun protection device in Altair HyperMesh and solved three regulatory load cases with contact in Abaqus/Standard; identified the governing case (234.6 MPa against 230 MPa yield at the mounting flange) and recommended stronger material grades.</li>
+  </ul>
+</section>
+
+<section id="skills">
+  <h2>Skills and tools</h2>
+  <div class="cols">
+    <div><h3>Analysis</h3><div class="pills"><span class="pill">ANSYS Mechanical</span><span class="pill">Abaqus/Standard</span><span class="pill">Altair HyperMesh</span><span class="pill">OpenFOAM</span><span class="pill">OpenSeesPy</span><span class="pill">XFLR5 (XFoil)</span><span class="pill">AeroSandbox</span><span class="pill">MATLAB/Simulink</span><span class="pill">NASGRO</span></div></div>
+    <div><h3>CAD and geometry</h3><div class="pills"><span class="pill">PTC Creo</span><span class="pill">CATIA V5</span><span class="pill">SolidWorks</span><span class="pill">CadQuery / OCP (OpenCascade)</span><span class="pill">GD&amp;T (ASME Y14.5)</span><span class="pill">Tolerance stack-up</span></div></div>
+    <div><h3>Software practice</h3><div class="pills"><span class="pill">Python (NumPy, SciPy, pandas, scikit-learn, pytest)</span><span class="pill">Bash, Linux</span><span class="pill">Docker</span><span class="pill">Git, GitHub Actions</span><span class="pill">CI/CD gates</span><span class="pill">Harbor task format</span><span class="pill">AI coding agents</span></div></div>
+    <div><h3>Review</h3><div class="pills"><span class="pill">Reference solutions</span><span class="pill">Deterministic graders</span><span class="pill">Hidden evaluation cases</span><span class="pill">Difficulty calibration</span><span class="pill">Bypass and reward-hacking review</span><span class="pill">Mesh and solver convergence</span><span class="pill">Reproducibility</span></div></div>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education and certifications</h2>
+  <div class="cols">
+    <div>
+      <h3>MSc Aerospace Engineering</h3>
+      <p class="sub">University of Salford, United Kingdom · 2023 · 2:1</p>
+      <p>Dissertation: structural analysis of an aircraft engine bracket by the finite element method. Coursework: aerospace systems design, CFD, FEA, structural dynamics, composite structures, additive manufacturing.</p>
+      <h3>BTech Aerospace Engineering</h3>
+      <p class="sub">Karunya Institute of Technology and Sciences, Coimbatore, India · 2021 · 2:1</p>
+    </div>
+    <div>
+      <h3>Certifications</h3>
+      <ul>
+        <li>Machine Learning Specialization, DeepLearning.AI and Stanford Online, 2026</li>
+        <li>Airbus Supply Chain Specialist, Airbus Beyond, 2026 (<a href="https://github.com/Dineshnae/Dineshnae/blob/main/Airbus_suplply_chain_specialist.pdf">certificate</a>)</li>
+        <li>Master Diploma in Product Design, CADD Centre, 2022 (<a href="https://github.com/Dineshnae/Dineshnae/blob/main/cadd_product_design_diploma.pdf">certificate</a>)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Open to contract and full-time work in engineering simulation, CAD and AI evaluation, remote or in Bengaluru. Email is the fastest way to reach me: <a href="mailto:dineshnatarajan02@gmail.com">dineshnatarajan02@gmail.com</a>. Also on <a href="https://linkedin.com/in/dinesh-natarajan-baaa95206">LinkedIn</a> and <a href="https://github.com/Dineshnae">GitHub</a>.</p>
+</section>
+
+</main>
+
+<footer><div class="wrap">Dinesh Natarajan · Bengaluru, India · <a href="Dinesh_Natarajan_CV.pdf">CV (PDF)</a> · Source for this page is on <a href="https://github.com/Dineshnae/dineshnae.github.io">GitHub</a>.</div></footer>
+
+</body>
+</html>
