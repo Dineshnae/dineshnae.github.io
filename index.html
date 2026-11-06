@@ -66,8 +66,8 @@
 <header class="hero">
   <div class="wrap">
     <h1>Dinesh Natarajan</h1>
-    <p class="tag">Aerospace engineer · engineering tasks, reference solutions and graders for AI training · FEA, CFD, CAD</p>
-    <p class="lead">I build the problem statement, the disclosed standard, the verified reference solution and the automated grader that test AI models on real design work, then review the grader for ways a submission could score without doing the engineering. Six Hardware/CAD tasks accepted on Handshake AI's Project Insight in October 2026; the last two were not solved in any of five trials by the benchmark's frontier model. The engineering underneath is hands-on: finite-element analysis, CFD and aerodynamics, flight dynamics, fatigue and damage tolerance, B-rep geometry and GD&amp;T.</p>
+    <p class="tag">Aerospace and mechanical engineer · expert engineering tasks, graders and evaluations for AI training · FEA, CFD, structural dynamics, Python</p>
+    <p class="lead">I build the problem statement, the disclosed standard, the verified reference solution and the automated grader that test AI models on real design work, then review the grader for ways a submission could score without doing the engineering. On Handshake AI's Project Insight: six Hardware/CAD tasks accepted (the last two were not solved in any of five trials by the benchmark's frontier model) and four Science tasks submitted in November 2026 after every review gate, including the combined Pass@8 difficulty gate. I also built AEROTRACE, an open benchmark for engineering agents. The engineering underneath is hands-on: finite-element analysis, CFD and aerodynamics, flight dynamics, fatigue and damage tolerance, B-rep geometry and GD&amp;T.</p>
     <div class="meta">
       <span>Bengaluru, India</span>
       <a href="mailto:dineshnatarajan02@gmail.com">dineshnatarajan02@gmail.com</a>
@@ -110,6 +110,12 @@
   <h2>Selected work</h2>
   <div class="grid">
     <div class="card">
+      <h3><a href="https://aerotrace-engineering-agent-evals.dn2066671.chatgpt.site">AEROTRACE</a> · <a href="https://github.com/Dineshnae/aerotrace-engineering-agent-evals">source</a></h3>
+      <p>Engineering-agent evaluation benchmark: can a tool-using AI agent pick the authoritative evidence, calculate a structural review correctly and justify PASS, FAIL or HOLD? 28 synthetic cases in 14 trap families, a strict 8-gate grader, and beam results cross-checked by a finite-element stiffness model.</p>
+      <p class="result">183 of 183 injected grader defects caught; in a 168-trial study, decisions were 100 % correct yet full-answer grading caught two numerical errors</p>
+      <p class="stack">Python · JavaScript · OpenAI API · GitHub Actions</p>
+    </div>
+    <div class="card">
       <h3><a href="https://github.com/Dineshnae/reconloop">ReconLoop</a> · <a href="https://huggingface.co/spaces/dn2066/reconloop">live demo</a></h3>
       <p>Settlement reconciliation agent graded against an answer key on 20 held-out batches. Rules do the work; a model breaks ties only where rules cannot, and the rules re-check every answer.</p>
       <p class="result">83 tests; CI fails on a single wrong link</p>
@@ -151,8 +157,10 @@
 <section id="experience">
   <h2>Experience</h2>
 
-  <div class="role"><h3>Task author, Hardware/CAD · Handshake AI, Project Insight (contract, remote)</h3><span class="when">Sep to Oct 2026</span></div>
+  <div class="role"><h3>Task author, Hardware/CAD and Science · Handshake AI, Project Insight (contract, remote)</h3><span class="when">Sep 2026 to present</span></div>
   <ul>
+    <li>Science (November 2026): four tasks submitted after every review gate, including deep review, ambiguity and adversarial verifier audits and the combined Pass@8 difficulty gate (at most 2 of 8 frontier trials solved): experimental modal analysis from roving-hammer records, CMM seating of a hip-taper junction, thermographic delamination sizing in composite panels, and ASTM E1820 J-integral toughness from unloading-compliance records.</li>
+    <li>Each Science task: a physics-based data generator whose truth stays at least 1.5 bands from every decision threshold, a reference within two-thirds of the band on 40+ validation cases, counted shortcut methods that miss by two bands or more, and a sandboxed verifier; when a CI trial solved, I traced which judgement its program handled by a shortcut and added fair traps witnessed in the public samples.</li>
     <li>Authored six terminal-based CAD and structures tasks for a frontier-model benchmark (Terminal-Bench 3 format); all six passed the automated review chain: static checks, artificiality, oracle and no-op validation, implementation rubric, deep review, adversarial verifier audit, Pass@2 and Pass@5 trials.</li>
     <li>Each task: an instruction in the voice of a stress or manufacturing office, a disclosed standard, a Docker agent environment, and a separate verifier image holding the generating geometry and held-back cases pinned by SHA-256, with pytest graders and a binary reward written only by the verifier.</li>
     <li>Exact graders: two-way B-rep distance at 1.0 mm sampling with a Lipschitz bound, coverage, free-edge checks after sewing, thickness within 2 percent, retained-solid count, volume and surface; non-finite values fail closed.</li>
